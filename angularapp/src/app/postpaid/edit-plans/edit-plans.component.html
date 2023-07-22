@@ -1,0 +1,77 @@
+<form [formGroup]="editpostpaidform" (ngSubmit)="onSubmit()">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="planName">Plan Name:</label>
+            <input type="text" class="form-control" [(ngModel)]="planName" placeholder="Enter Plan Name" id="editplanName" formControlName="planName">     
+            <div *ngIf="f['planName'].touched && f['planName'].invalid" class="alert alert-danger">
+                <div *ngIf="f['planName'].errors && f['planName'].errors['required']">Plan Name is required.</div>
+                <div *ngIf="f['planName'].errors && f['planName'].errors['minlength']">Plan Name should be 3 character.</div>
+            </div>
+        </div>
+        <br>
+        <div class="form-group col-md-6">
+            <label for="planPrice">Plan Price:</label>
+            <input type="text" class="form-control" [(ngModel)]="planPrice" placeholder="Enter Plan Price" id="editplanPrice" formControlName="planPrice">
+            <div *ngIf="f['planPrice'].touched && f['planPrice'].invalid" class="alert alert-danger">
+                <div *ngIf="f['planPrice'].errors && f['planPrice'].errors['required']">Plan Price is required.</div>
+                <div *ngIf="f['planPrice'].errors && f['planPrice'].errors['min'] || f['planPrice'].errors['max'] ">Price should be 10 to 10000 rupees.</div>
+                <div *ngIf="f['planPrice'].errors && f['planPrice'].errors['planPrice']" >Enter a valid number between 10 to 10000 rupees</div>
+            </div>
+        </div>
+    </div>
+  <br>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+        <label for="planType">Plan Type:</label>
+        <select id="editplanType" name="planType" formControlName="planType" class="form-control" height="20px"  [(ngModel)]="planType">
+            <option value="" disabled selected>Select Plan Type</option>
+            <option value="Prepaid">Prepaid</option>
+            <option value="Postpaid">Postpaid</option>
+        </select>
+        <div *ngIf="f['planType'].touched && f['planType'].invalid" class="alert alert-danger">
+            <div *ngIf="f['planType'].errors && f['planType'].errors['required']">Plan Type is required.</div>
+        </div>
+    </div>
+
+       <!-- <label for="planType">Plan Type:</label>
+        <input type="text" class="form-control" [(ngModel)]="planType" placeholder="Enter Plan Type" id="editplanType" formControlName="planType">
+        <div *ngIf="f['planType'].touched && f['planType'].invalid" class="alert alert-danger">
+            <div *ngIf="f['planType'].errors && f['planType'].errors['required']">Plan Type is required.</div>
+            <div *ngIf="f['planType'].errors && f['planType'].errors['minlength']">Plan Type should be 3 character.</div>
+        </div>
+    </div>-->
+    <div class="form-group col-md-6">
+        <label for="planOffers">Plan Offers:</label>
+        <input type="text" class="form-control" [(ngModel)]="planOffers" placeholder="Enter Plan Offers" id="editplanOffers" formControlName="planOffers">
+        <div *ngIf="f['planOffers'].touched && f['planOffers'].invalid" class="alert alert-danger">
+            <div *ngIf="f['planOffers'].errors && f['planOffers'].errors['required']">Plan Offers is required.</div>
+            <div *ngIf="f['planOffers'].errors && f['planOffers'].errors['minlength']">Plan Offers should be 3 character.</div>
+        </div>
+    </div>
+  </div>
+  <br>
+  <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="planValidity">Plan Validity:</label>
+            <input type="text" class="form-control" [(ngModel)]="planValidity" placeholder="Enter Plan Validity" id="editplanValidity" formControlName="planValidity">
+            <div *ngIf="f['planValidity'].touched && f['planValidity'].invalid" class="alert alert-danger">
+                <div *ngIf="f['planValidity'].errors && f['planValidity'].errors['required']">Plan Validity is required.</div>
+                <div *ngIf="f['planValidity'].errors && f['planValidity'].errors['min'] || f['planValidity'].errors['max'] ">Validity should be atleast 1 day to atmost 1year.</div>
+                <div *ngIf="f['planValidity'].errors && f['planValidity'].errors['invalidNumber']">Enter a valid number between 1 day to 365 days</div>
+            </div>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="planDescription">Plan Description:</label>
+            <input type="text" class="form-control" [(ngModel)]="planDescription" placeholder="Enter Plan Description" id="editplanDescription" formControlName="planDescription"> 
+            <div *ngIf="f['planDescription'].touched && f['planDescription'].invalid" class="alert alert-danger">
+                <div *ngIf="f['planDescription'].errors && f['planDescription'].errors['required']">Plan Description is required.</div>
+                <div *ngIf="f['planDescription'].errors && f['planDescription'].errors['minlength']">Plan Description should be 5 character.</div>
+            </div>
+        </div>
+    </div>
+  <br>
+<button (click)="updatePlan()" *ngIf="plans.planId!==0" class="btn btn-primary" [disabled]="editpostpaidform.invalid" style="background-color: #cc61ca;">
+    Update
+</button>
+
+</form>
