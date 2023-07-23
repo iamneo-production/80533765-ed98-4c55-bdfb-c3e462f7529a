@@ -1,0 +1,8 @@
+.star {
+    color: #c3c3c3; /* Default star color */
+  }
+  
+  .star.filled {
+    color: #e72f3b; /* Filled star color */
+  }
+  
