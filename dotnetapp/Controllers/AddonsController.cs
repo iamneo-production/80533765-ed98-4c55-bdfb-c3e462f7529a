@@ -53,7 +53,7 @@ namespace dotnetapp.Controllers
 
         if (existingAddon != null)
         {
-            return BadRequest("Addon with the same details already exists.");
+            return BadRequest(new { Message = "Addon with the same details already exists."});
         }
 
         _dbContext.Addons.Add(rechargePlan);
@@ -81,7 +81,7 @@ namespace dotnetapp.Controllers
 
         if (existingAddon != null)
         {
-            return BadRequest("Addon with the same details already exists.");
+            return BadRequest(new { Message = "Addon with the same details already exists."});
         }
 
         existingPlan.addonName = updatedPlan.addonName;
@@ -113,7 +113,7 @@ namespace dotnetapp.Controllers
 
         if (existingAddon != null)
         {
-            return BadRequest("Addon with the same details already exists.");
+           return BadRequest(new { Message = "Addon with the same details already exists."});
         }
 
         existingPlan.addonName = updatedPlan.addonName;
