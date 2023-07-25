@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class LoginService {
 
-  private baseUrl: string = "https://8080-faacbacbeaaaaddcbdfdabdadcfacebfffcdcbfec.project.examly.io/admin/login";
+  private baseUrl: string = "https://8080-fffebfbbfbffdaaaaddcbdfdabdadcfacebfffcdcbfec.project.examly.io/admin/login";
 
   private isLoggedIn: boolean = false;
 
