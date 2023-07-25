@@ -80,7 +80,7 @@ export class SharedService {
       return this.http.get(`https://8080-fffebfbbfbffdaaaaddcbdfdabdadcfacebfffcdcbfec.project.examly.io/api/Recharge/${largeId}`);
     }
     getPlanDetailsById(planId: number): Observable<any> {
-      return this.http.get(`hhttps://8080-fffebfbbfbffdaaaaddcbdfdabdadcfacebfffcdcbfec.project.examly.io/api/plans/${planId}`);
+      return this.http.get(`https://8080-fffebfbbfbffdaaaaddcbdfdabdadcfacebfffcdcbfec.project.examly.io/api/plans/${planId}`);
     }
     getAddonDetailsById(planId:number):Observable<any> {
       return this.http.get(`https://8080-fffebfbbfbffdaaaaddcbdfdabdadcfacebfffcdcbfec.project.examly.io/api/Addons/${planId}`);
