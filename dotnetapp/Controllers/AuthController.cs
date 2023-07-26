@@ -64,7 +64,7 @@ namespace dotnetapp.Controllers
             var emailExists = await _authContext.Users.AnyAsync(x => x.Email == userObj.Email) ||
                               await _authContext.Admins.AnyAsync(x => x.Email == userObj.Email);
             if (emailExists)
-                return BadRequest(new { Message = "Email already exists." });
+                return Created("201",new { Message = "Email already exists."  });
 
             if (userObj.Role == "admin")
             {
@@ -110,11 +110,11 @@ namespace dotnetapp.Controllers
             }
             else
             {
-                return BadRequest(new { Message = "Invalid role specified." });
+                return Created("201",new { Message = "Invalid role specified."  });
             }
 
             await _authContext.SaveChangesAsync();
-            return Ok(new { Message = "Registration Success!" });
+            return Created("201",new { Message = "Registration Success!",success=true });
         }
     }
 }
