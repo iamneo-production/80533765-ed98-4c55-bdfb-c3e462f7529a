@@ -30,6 +30,7 @@ export class RechargeplanComponent implements OnInit {
   RechargePlan:string="";
   Mobile:string="";
   RechargePrice:string="";
+  PlanId:number;
   
   ngOnInit(): void {
       this.RechargeId=this.recharge.RechargeId;
@@ -39,6 +40,7 @@ export class RechargeplanComponent implements OnInit {
       this.RechargePlan=this.recharge.RechargePlan;
       this.Mobile=this.recharge.Mobile;
       this.RechargePrice=this.recharge.RechargePrice;
+      this.PlanId=this.recharge.PlanId;
       console.log(this.planId);
       this.getPlanDetails();
       }
@@ -46,12 +48,13 @@ export class RechargeplanComponent implements OnInit {
   addRecharge(){
     var val = {
       RechargeId:this.RechargeId,
-      RechargeType:this.RechargeType,
+      RechargeType:this.planDetails?.planType,
       Email:this.Email,
       UName:this.UName,
-      RechargePlan:this.RechargePlan,
+      RechargePlan:this.planDetails?.planName,
       Mobile:this.Mobile,
-      RechargePrice:this.RechargePrice};
+      RechargePrice:this.planDetails?.planPrice,
+      PlanId:this.planId}
   this.service.addRecharge(val).subscribe(res=>{alert(res.toString());});
   
   }
@@ -64,7 +67,7 @@ export class RechargeplanComponent implements OnInit {
     if (this.rechargeform.valid) {
       // Form submission logic here
       console.log(this.rechargeform.value);
-      this.router.navigate(['/notification'],{ queryParams: { planId: this.planId }}) .then(() => {
+      this.router.navigate(['/notification'],{ queryParams: { planId: this.planId}}) .then(() => {
         window.location.reload();
       });
     error: (err) => {

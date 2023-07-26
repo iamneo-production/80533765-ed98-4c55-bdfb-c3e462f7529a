@@ -29,10 +29,10 @@ export class LoginComponent implements OnInit {
           alert(res.message);
           this.loginForm.reset();
           if (res.message === 'Admin login success!') {
-            this.loginService.setLoggedIn(true);
+            this.loginService.setLoggedIn(true,res.email);
             this.router.navigate(['admin-home']);
           } else if (res.message === 'User login success!') {
-            this.loginService.setLoggedIn(true);
+            this.loginService.setLoggedIn(true,res.email);
             this.router.navigate(['user-home']);
           } 
         },
@@ -44,6 +44,9 @@ export class LoginComponent implements OnInit {
       this.loginForm.markAllAsTouched();
   }
   } 
+  get email() {
+    return this.loginForm.get('Email');
+  }
 }
 
 

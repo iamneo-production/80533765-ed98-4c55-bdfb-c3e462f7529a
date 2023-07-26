@@ -29,6 +29,8 @@ import { RechargeaddonComponent } from './useraddon/rechargeaddon/rechargeaddon.
 import { RechargeplanComponent } from './popular-plans/rechargeplan/rechargeplan.component';
 import { AdminhomeComponent } from './adminhome/adminhome.component';
 import { UserhomeComponent } from './userhome/userhome.component';
+import { LoginService } from './login.service';
+
 
 
 @NgModule({
@@ -57,7 +59,7 @@ import { UserhomeComponent } from './userhome/userhome.component';
     RechargeaddonComponent,
     RechargeplanComponent,
     AdminhomeComponent,
-    UserhomeComponent
+    UserhomeComponent,
 
   ],
   imports: [
@@ -67,7 +69,7 @@ import { UserhomeComponent } from './userhome/userhome.component';
     FormsModule,
     ReactiveFormsModule.withConfig({warnOnNgModelWithFormControl: 'never'}),
   ],
-  providers: [SharedService],
+  providers: [SharedService,LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

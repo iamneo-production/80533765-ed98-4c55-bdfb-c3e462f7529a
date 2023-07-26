@@ -77,6 +77,7 @@ namespace dotnetapp.Controllers
         existingPlan.Email  = updatedPlan.Email ;
         existingPlan.RechargePlan  = updatedPlan.RechargePlan ;
         existingPlan.RechargePrice  = updatedPlan.RechargePrice ;
+        existingPlan.PlanId=updatedPlan.PlanId;
 
         // Update other properties as needed
 
@@ -100,6 +101,7 @@ namespace dotnetapp.Controllers
         existingPlan.Email  = updatedPlan.Email ;
         existingPlan.RechargePlan  = updatedPlan.RechargePlan ;
         existingPlan.RechargePrice  = updatedPlan.RechargePrice ;
+        existingPlan.PlanId=updatedPlan.PlanId
 
         _dbContext.SaveChanges();
 
@@ -122,5 +124,15 @@ namespace dotnetapp.Controllers
 
         return NoContent();
     }
+    [HttpGet("api/recharges/{mobileNumber}")]
+        public IActionResult GetRechargesByMobileNumber(string mobileNumber)
+        {
+            // Use the mobileNumber parameter to query the database and get recharge details.
+            // Assuming you have a Recharge model and DbContext, you can use LINQ to retrieve data.
+            var recharges = _dbContext.Recharge.Where(r => r.Mobile == mobileNumber).ToList();
+
+            return Ok(recharges);
+        }
+
     }
 }
