@@ -25,8 +25,8 @@
     <div class="form-group col-md-6">
         <label for="planType">Plan Type:</label>
         <select id="planType" name="planType" formControlName="planType" class="form-control" height="20px"  [(ngModel)]="planType">
-            <option value="" disabled selected>Select Plan Type</option>
-            <option value="Prepaid">Prepaid</option>
+            <option value="">Select Plan Type</option>
+            <option  value="Prepaid" >Prepaid</option>
             <option value="Postpaid">Postpaid</option>
         </select>
         <div *ngIf="f['planType'].touched && f['planType'].invalid" class="alert alert-danger">
@@ -68,9 +68,17 @@
             <input type="text" class="form-control" [(ngModel)]="planDescription" placeholder="Enter Plan Description" id="planDescription" formControlName="planDescription">
             <div *ngIf="f['planDescription'].touched && f['planDescription'].invalid" class="alert alert-danger">
                 <div *ngIf="f['planDescription'].errors && f['planDescription'].errors['required']">Plan Description is required.</div>
-                <div *ngIf="f['planDescription'].errors && f['planDescription'].errors['minlength']">Plan Description should be 5 character.</div>
-            </div>
-        </div>
+                <div *ngIf="f['planDescription'].errors && f['planDescription'].errors['invalidDescription']">
+                  Invalid description. Valid descriptions are:
+                  <ul>
+                    <li *ngFor="let pattern of f['planDescription'].errors['matchedPatterns']">
+                      {{ pattern.identifier }}
+                    </li>
+                  </ul>
+                </div>
+                </div>
+                </div>
+
     </div>
   <br>
 

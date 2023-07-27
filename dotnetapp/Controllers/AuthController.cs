@@ -18,6 +18,17 @@ namespace dotnetapp.Controllers
         {
             _authContext = appDbContext;
         }
+        [HttpGet("api/user/{email}")]
+    public async Task<IActionResult> GetUserByEmail(string email)
+    {
+        var user = await _authContext.Users.FirstOrDefaultAsync(u => u.Email == email);
+        if (user == null)
+        {
+            return NotFound(new { Message = "User not found." });
+        }
+
+        return Ok(new { Message = "User details fetched successfully.", User = user });
+    }
 
         [HttpPost("admin/login")]
         public async Task<IActionResult> Authenticate([FromBody] Login loginObj)
@@ -33,11 +44,11 @@ namespace dotnetapp.Controllers
 
             if (await _authContext.Admins.AnyAsync(x => x.Email == loginObj.Email))
             {
-                 return Created("201", new { Message = "Admin login success!",success=true });
+                 return Created("201", new { Message = "Admin login success!",success=true, Email = loginObj.Email});
             }
             else if (await _authContext.Users.AnyAsync(x => x.Email == loginObj.Email))
             {
-                return Created("201",new { Message = "User login success!" ,success=true});
+                return Created("201",new { Message = "User login success!" ,success=true,Email = loginObj.Email});
             }
 
             return Created("201",new { Message = "Role not found for the specified email." });
@@ -53,7 +64,7 @@ namespace dotnetapp.Controllers
             var emailExists = await _authContext.Users.AnyAsync(x => x.Email == userObj.Email) ||
                               await _authContext.Admins.AnyAsync(x => x.Email == userObj.Email);
             if (emailExists)
-                return BadRequest(new { Message = "Email already exists." });
+                return Created("201",new { Message = "Email already exists."  });
 
             if (userObj.Role == "admin")
             {
@@ -99,11 +110,11 @@ namespace dotnetapp.Controllers
             }
             else
             {
-                return BadRequest(new { Message = "Invalid role specified." });
+                return Created("201",new { Message = "Invalid role specified."  });
             }
 
             await _authContext.SaveChangesAsync();
-            return Ok(new { Message = "Registration Success!" });
+            return Created("201",new { Message = "Registration Success!",success=true });
         }
     }
 }

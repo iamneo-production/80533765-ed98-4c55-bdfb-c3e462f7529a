@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { SharedService } from 'src/app/services/shared.service';
 import { FormControl,FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { planDescriptionValidator } from 'src/app/plan-validation';
 
 @Component({
   selector: 'app-edit-plans',
@@ -16,10 +17,10 @@ export class EditPlansComponent implements OnInit {
   this.editpostpaidform = this.formBuilder.group({
     planName: ['', [Validators.required,Validators.minLength(3)]],
     planPrice: ['',[Validators.required,this.numberOnlyValidator(10, 10000)]],
-    planType:['',[Validators.required]],
+    planType:['PostPaid',[Validators.required]],
     planOffers:['', [Validators.required, Validators.minLength(3)]],
     planValidity:['',[Validators.required,this.numberOnlyValidator(1, 365)]],
-    planDescription:['',[Validators.required,Validators.minLength(3)]]
+    planDescription:['',[Validators.required,Validators.minLength(3),planDescriptionValidator()]]
   });
 };
 
@@ -58,7 +59,7 @@ get f(){
       this.planId=this.plans.planId;
       this.planName=this.plans.planName;
       this.planPrice=this.plans.planPrice;
-      this.planType=this.plans.planType;
+      this.planType=this.plans.planType || 'PostPaid';
       this.planOffers=this.plans.planOffers;
       this.planValidity=this.plans.planValidity;
       this.planDescription=this.plans.planDescription;

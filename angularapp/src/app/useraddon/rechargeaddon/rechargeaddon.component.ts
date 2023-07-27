@@ -50,9 +50,9 @@ export class RechargeaddonComponent implements OnInit {
         RechargeType:this.RechargeType,
         Email:this.Email,
         UName:this.UName,
-        RechargePlan:this.RechargePlan,
+        RechargePlan:this.planDetails?.addonName,
         Mobile:this.Mobile,
-        RechargePrice:this.RechargePrice};
+        RechargePrice:this.planDetails?.addonPrice};
     this.service.addRecharge(val).subscribe(res=>{alert(res.toString());});
     
     }

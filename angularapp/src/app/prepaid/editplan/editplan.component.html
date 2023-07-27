@@ -64,7 +64,14 @@
             <input type="text" class="form-control" [(ngModel)]="planDescription" placeholder="Enter Plan Description" id="editplanDescription" formControlName="planDescription"> 
             <div *ngIf="f['planDescription'].touched && f['planDescription'].invalid" class="alert alert-danger">
                 <div *ngIf="f['planDescription'].errors && f['planDescription'].errors['required']">Plan Description is required.</div>
-                <div *ngIf="f['planDescription'].errors && f['planDescription'].errors['minlength']">Plan Description should be 5 character.</div>
+                <div *ngIf="f['planDescription'].errors && f['planDescription'].errors['invalidDescription']">
+                  Invalid description. Valid descriptions are:
+                  <ul>
+                    <li *ngFor="let pattern of f['planDescription'].errors['matchedPatterns']">
+                      {{ pattern.identifier }}
+                    </li>
+                  </ul>
+                </div>
             </div>
         </div>
     </div>

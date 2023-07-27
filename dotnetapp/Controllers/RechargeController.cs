@@ -41,7 +41,7 @@ namespace dotnetapp.Controllers
         return Ok(rechargePlan);
     }
      [HttpGet("api/Recharge/largeId")]
-    public IActionResult Get()
+    public IActionResult GetlargerId()
     {
         int largestPlanId = _dbContext.Recharge.Max(p => p.RechargeId);
         
@@ -58,7 +58,7 @@ namespace dotnetapp.Controllers
         _dbContext.Recharge.Add(rechargePlan);
         _dbContext.SaveChanges();
 
-        return CreatedAtAction(nameof(GetRechargePlanById), new { id = rechargePlan.RechargeId }, rechargePlan);
+        return CreatedAtAction(nameof(GetRechargePlanById), new { id = rechargePlan.RechargeId ,Message = "Recharge successfully done."}, rechargePlan);
     }
 
     [HttpPut("api/Recharge")]
@@ -77,6 +77,7 @@ namespace dotnetapp.Controllers
         existingPlan.Email  = updatedPlan.Email ;
         existingPlan.RechargePlan  = updatedPlan.RechargePlan ;
         existingPlan.RechargePrice  = updatedPlan.RechargePrice ;
+        existingPlan.PlanId=updatedPlan.PlanId;
 
         // Update other properties as needed
 
@@ -86,7 +87,7 @@ namespace dotnetapp.Controllers
     }
     // PUT api/rechargeplan/{id}
     [HttpPut("api/Recharge/{id}")]
-    public ActionResult<Addons> UpdateRechargePlan(int id, Recharge updatedPlan)
+    public ActionResult<Addons> UpdateRechargePlanById(int id, Recharge updatedPlan)
     {
         var existingPlan = _dbContext.Recharge.Find(id);
 
@@ -100,6 +101,7 @@ namespace dotnetapp.Controllers
         existingPlan.Email  = updatedPlan.Email ;
         existingPlan.RechargePlan  = updatedPlan.RechargePlan ;
         existingPlan.RechargePrice  = updatedPlan.RechargePrice ;
+        existingPlan.PlanId=updatedPlan.PlanId;
 
         _dbContext.SaveChanges();
 
@@ -108,7 +110,7 @@ namespace dotnetapp.Controllers
 
     // DELETE api/rechargeplan/{id}
     [HttpDelete("api/Recharge/{id}")]
-    public ActionResult DeleteRechargePlan(int id)
+    public ActionResult DeleteRechargePlanById(int id)
     {
         var rechargePlan = _dbContext.Recharge.Find(id);
 
@@ -122,5 +124,15 @@ namespace dotnetapp.Controllers
 
         return NoContent();
     }
+    [HttpGet("api/recharges/{mobileNumber}")]
+        public IActionResult GetRechargesByMobileNumber(string mobileNumber)
+        {
+            // Use the mobileNumber parameter to query the database and get recharge details.
+            // Assuming you have a Recharge model and DbContext, you can use LINQ to retrieve data.
+            var recharges = _dbContext.Recharge.Where(r => r.Mobile == mobileNumber).ToList();
+
+            return Ok(recharges);
+        }
+
     }
 }
