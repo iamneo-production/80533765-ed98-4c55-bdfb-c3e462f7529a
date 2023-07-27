@@ -1,0 +1,59 @@
+<form [formGroup]="addonform" (ngSubmit)="onSubmit()">
+  <div class="form-row">
+      <div class="form-group col-md-6">
+          <label for="addonName">Plan Name:</label>
+          <input type="text" class="form-control" [(ngModel)]="addonName" placeholder="Enter Plan Name" id="addonName" formControlName="addonName">     
+          <div *ngIf="f['addonName'].touched && f['addonName'].invalid" class="alert alert-danger">
+              <div *ngIf="f['addonName'].errors && f['addonName'].errors['required']">Plan Name is required.</div>
+              <div *ngIf="f['addonName'].errors && f['addonName'].errors['minlength']">Plan Name should be 3 character.</div>
+          </div>
+      </div>
+      <br>
+      <div class="form-group col-md-6">
+          <label for="addonPrice">Plan Price:</label>
+          <input type="text" class="form-control" [(ngModel)]="addonPrice" placeholder="Enter Plan Price" id="addonPrice" formControlName="addonPrice">
+          <div *ngIf="f['addonPrice'].touched && f['addonPrice'].invalid" class="alert alert-danger">
+              <div *ngIf="f['addonPrice'].errors && f['addonPrice'].errors['required']">Plan Price is required.</div>
+              <div *ngIf="f['addonPrice'].errors && f['addonPrice'].errors['min'] || f['addonPrice'].errors['max'] ">Price should be 10 to 10000 rupees.</div>
+              <div *ngIf="f['addonPrice'].errors && f['addonPrice'].errors['invalidNumber'] " >Enter a valid number between 10 to 10000 rupees</div>
+          </div>
+      </div>
+  </div>
+<br>
+<div class="form-row">
+  <div class="form-group col-md-6">
+      <label for="addonType">Plan Type:</label>
+      <input type="text" class="form-control" [(ngModel)]="addonType" placeholder="Enter Plan Type" id="addonType" formControlName="addonType" >
+      <div *ngIf="f['addonType'].touched && f['addonType'].invalid" class="alert alert-danger">
+          <div *ngIf="f['addonType'].errors && f['addonType'].errors['required']">Plan Type is required.</div>
+          <div *ngIf="f['addonType'].errors && f['addonType'].errors['minlength']">Plan Type should be 3 character.</div>
+      </div>
+  </div>
+  <div class="form-group col-md-6"></div>
+</div>
+<br>
+<div class="form-row">
+      <div class="form-group col-md-6">
+          <label for="addonValidity">Plan Validity:</label>
+          <input type="text" class="form-control" [(ngModel)]="addonValidity" placeholder="Enter Plan Validity" id="addonValidity" formControlName="addonValidity">
+          <div *ngIf="f['addonValidity'].touched && f['addonValidity'].invalid" class="alert alert-danger">
+              <div *ngIf="f['addonValidity'].errors && f['addonValidity'].errors['required']">Plan Validity is required.</div>
+          </div>
+      </div>
+      <div class="form-group col-md-6">
+          <label for="addonDetails">Plan Description:</label>
+          <input type="text" class="form-control" [(ngModel)]="addonDetails" placeholder="Enter Plan Description" id="addonDetails" formControlName="addonDetails"> 
+          <div *ngIf="f['addonDetails'].touched && f['addonDetails'].invalid" class="alert alert-danger">
+              <div *ngIf="f['addonDetails'].errors && f['addonDetails'].errors['required']">Plan Description is required.</div>
+              <div *ngIf="f['addonDetails'].errors && f['addonDetails'].errors['minlength']">Plan Description should be 5 character.</div>
+          </div>
+      </div>
+  </div>
+<br>
+<button (click)="addPlan()" *ngIf="addons.addonId==0" class="btn btn-primary" style="background-color: #cc61ca;">
+  Add
+</button>
+
+</form>
+
+
