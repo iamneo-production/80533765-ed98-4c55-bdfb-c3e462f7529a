@@ -29,3 +29,24 @@ export function planDescriptionValidator() {
     return { invalidDescription: true, matchedPatterns: planDescriptionPatterns };
   };
 }
+export const AddonDescriptionPatterns = [
+  { pattern: /^\d+(\.\d+)?\s?GB$/i, identifier: 'GB' },
+];
+
+export function AddonDescriptionValidator() {
+  return (control: AbstractControl): { [key: string]: any } | null => {
+    const value = control.value;
+
+    // Remove extra spaces and convert to lowercase
+    const cleanedValue = value.trim().toLowerCase();
+
+    // Loop through the array of regular expressions with identifiers
+    for (const patternObj of AddonDescriptionPatterns) {
+      if (patternObj.pattern.test(cleanedValue)) {
+        return null; // Valid
+      }
+    }
+
+    return { invalidDescription: true, allowedPattern: 'GB' };
+  };
+}

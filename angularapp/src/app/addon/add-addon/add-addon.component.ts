@@ -1,6 +1,7 @@
 import { Component, OnInit, Input} from '@angular/core';
 import { SharedService } from 'src/app/services/shared.service';
 import { FormControl,FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AddonDescriptionValidator } from 'src/app/plan-validation';
 
 @Component({
   selector: 'app-add-addon',
@@ -18,7 +19,7 @@ export class AddAddonComponent implements OnInit {
     addonPrice: ['',[Validators.required,this.numberOnlyValidator(10, 10000)]],
     addonType:['',[Validators.required,Validators.minLength(3)]],
     addonValidity:['',[Validators.required]],
-    addonDetails:['',[Validators.required,Validators.minLength(3)]]
+    addonDetails:['',[Validators.required,Validators.minLength(3),AddonDescriptionValidator()]]
   });
 };
 
