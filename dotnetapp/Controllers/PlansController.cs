@@ -107,7 +107,11 @@ public ActionResult<PostPaid> UpdateRechargePlan(PostPaid updatedPlan)
 
     // PUT api/rechargeplan/{id}
     [HttpPut("api/rechargeplan/{id}")]
+<<<<<<< HEAD
 public ActionResult<PostPaid> UpdateRechargePlan(int id, PostPaid updatedPlan)
+=======
+public ActionResult<PostPaid> UpdateRechargePlanById(int id, PostPaid updatedPlan)
+>>>>>>> 7edfd09cbdb5b4822db1c078ebd6a6a80a100ef3
 {
     var existingPlan = _dbContext.PostPaid.FirstOrDefault(plan => plan.planId == id);
 
@@ -145,7 +149,11 @@ public ActionResult<PostPaid> UpdateRechargePlan(int id, PostPaid updatedPlan)
 
     // DELETE api/rechargeplan/{id}
     [HttpDelete("api/rechargeplan/{id}")]
+<<<<<<< HEAD
     public ActionResult DeleteRechargePlan(int id)
+=======
+    public ActionResult DeleteRechargePlanById(int id)
+>>>>>>> 7edfd09cbdb5b4822db1c078ebd6a6a80a100ef3
     {
         var rechargePlan = _dbContext.PostPaid.Find(id);
 
@@ -158,7 +166,11 @@ public ActionResult<PostPaid> UpdateRechargePlan(int id, PostPaid updatedPlan)
         _dbContext.PostPaid.Remove(rechargePlan);
         _dbContext.SaveChanges();
 
+<<<<<<< HEAD
         return Ok(new { Message = "Addon and associated reviews deleted successfully."});
+=======
+        return Ok(new { Message = "Plans and associated reviews deleted successfully."});
+>>>>>>> 7edfd09cbdb5b4822db1c078ebd6a6a80a100ef3
     }
      [HttpGet("api/rechargeplan/prepaid")]
     public IActionResult GetPrepaidPlans()

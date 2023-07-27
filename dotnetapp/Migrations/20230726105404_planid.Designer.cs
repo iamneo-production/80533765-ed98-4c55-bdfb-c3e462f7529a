@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using dotnetapp.Context;
 
@@ -10,9 +11,10 @@ using dotnetapp.Context;
 namespace dotnetapp.Migrations
 {
     [DbContext(typeof(PostPaidDbContext))]
-    partial class PostPaidDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230726105404_planid")]
+    partial class planid
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -137,12 +139,9 @@ namespace dotnetapp.Migrations
                     b.Property<string>("Mobile")
                         .HasColumnType("nvarchar(max)");
 
-<<<<<<< HEAD
-=======
                     b.Property<int>("PlanId")
                         .HasColumnType("int");
 
->>>>>>> 7edfd09cbdb5b4822db1c078ebd6a6a80a100ef3
                     b.Property<string>("RechargePlan")
                         .HasColumnType("nvarchar(max)");
 

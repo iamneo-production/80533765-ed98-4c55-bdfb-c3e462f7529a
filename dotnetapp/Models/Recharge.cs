@@ -16,5 +16,9 @@ namespace dotnetapp.Models
     public string Email { get; set; }
     public string RechargePlan { get; set; }
     public string RechargePrice { get; set; }
+<<<<<<< HEAD
+=======
+    public int PlanId{get;set;}
+>>>>>>> 7edfd09cbdb5b4822db1c078ebd6a6a80a100ef3
     }
 }
