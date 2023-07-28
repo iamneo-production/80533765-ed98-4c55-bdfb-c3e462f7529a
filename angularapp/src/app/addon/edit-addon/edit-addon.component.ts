@@ -62,9 +62,6 @@ get f(){
     if (this.editaddonform.valid) {
       // Form submission logic here
       console.log(this.editaddonform.value);
-      error: (err) => {
-        alert(err?.error.message);
-      }
     } else {
       // Mark form controls as touched to display validation errors
       this.markFormControlTouched();

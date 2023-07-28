@@ -71,9 +71,6 @@ export class AddPlansComponent implements OnInit {
     if (this.postpaidform.valid) {
       // Form submission logic here
       console.log(this.postpaidform.value);
-    error: (err) => {
-      alert(err?.error.message);
-    }
   }
      else {
       // Mark form controls as touched to display validation errors

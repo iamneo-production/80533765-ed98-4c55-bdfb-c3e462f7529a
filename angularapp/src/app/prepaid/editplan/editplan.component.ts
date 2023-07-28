@@ -70,9 +70,6 @@ get f(){
     if (this.editprepaidform.valid) {
       // Form submission logic here
       console.log(this.editprepaidform.value);
-    error:(err) => {
-      alert(err?.error.message);
-    }
     } else {
       // Mark form controls as touched to display validation errors
       this.markFormControlTouched();

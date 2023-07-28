@@ -64,9 +64,6 @@ numberOnlyValidator(min: number, max: number) {
     if (this.addonform.valid) {
       // Form submission logic here
       console.log(this.addonform.value);
-      error: (err) => {
-        alert(err?.error.message);
-      }
     } else {
       // Mark form controls as touched to display validation errors
       this.markFormControlTouched();

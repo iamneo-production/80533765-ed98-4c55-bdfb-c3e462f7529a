@@ -19,7 +19,7 @@ body {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-star {
+.star {
   font-size: 30px;
   cursor: pointer;
   color: #ccc;

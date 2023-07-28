@@ -68,9 +68,6 @@ export class RechargeaddonComponent implements OnInit {
         this.router.navigate(['/notification'],{ queryParams: { addonId: this.addonId }}) .then(() => {
           window.location.reload();
         });
-      error: (err) => {
-        alert(err?.error.message);
-      }
     }
       
     }
