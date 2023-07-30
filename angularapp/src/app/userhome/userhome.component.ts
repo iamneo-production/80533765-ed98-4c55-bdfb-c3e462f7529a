@@ -1,0 +1,42 @@
+import { Component, OnInit } from '@angular/core';
+import { LoginService } from '../login.service';
+import { HttpClient } from '@angular/common/http';
+
+@Component({
+  selector: 'app-userhome',
+  templateUrl: './userhome.component.html',
+  styleUrls: ['./userhome.component.css']
+})
+export class UserhomeComponent implements OnInit {
+
+  userEmail: string | null = null;
+  userMobileNumber: string | null = null;
+  userName:string | null=null;
+
+  constructor(private loginService: LoginService, private http: HttpClient) { }
+
+  ngOnInit(): void {
+    this.userEmail = this.loginService.getUserEmail();
+    this.fetchUserMobileNumber();
+
+  }
+
+  fetchUserMobileNumber() {
+<<<<<<< HEAD
+    this.http.get<any>(`https://8080-addadbdaeaaaddcbdfdabdafbcafdeccaedae.project.examly.io/api/user/${this.userEmail}`).subscribe({
+=======
+    this.http.get<any>(`https://8080-faacbacbeaaaaddcbdfdabdafbcafdeccaedae.project.examly.io/api/user/${this.userEmail}`).subscribe({
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
+      next: (res) => {
+        if (res?.user?.mobileNumber) {
+          console.log(res);
+          this.userMobileNumber = res.user.mobileNumber;
+          this.userName=res.user.username;
+        }
+      },
+      error: (err) => {
+        console.error('Error fetching user details:', err);
+      }
+    });
+  }
+}
