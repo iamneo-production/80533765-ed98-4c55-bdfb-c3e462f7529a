@@ -69,9 +69,6 @@ get f(){
     if (this.editpostpaidform.valid) {
       // Form submission logic here
       console.log(this.editpostpaidform.value);
-      error: (err) => {
-        alert(err?.error.message);
-      }
     } else {
       // Mark form controls as touched to display validation errors
       this.markFormControlTouched();

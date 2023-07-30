@@ -70,9 +70,6 @@ export class RechargeplanComponent implements OnInit {
       this.router.navigate(['/notification'],{ queryParams: { planId: this.planId}}) .then(() => {
         window.location.reload();
       });
-    error: (err) => {
-      alert(err?.error.message);
-    }
   }
      else {
       // Mark form controls as touched to display validation errors

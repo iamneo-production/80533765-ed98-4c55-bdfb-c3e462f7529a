@@ -73,10 +73,6 @@ export class AddplanComponent implements OnInit {
       // Form submission logic here
       console.log("1");
       console.log(this.prepaidform.value);
-      error:(err) => {
-        console.log("1");
-         alert(err?.error.Message);
-      }
 
     } else {
       // Mark form controls as touched to display validation errors
