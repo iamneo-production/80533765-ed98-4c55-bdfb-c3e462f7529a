@@ -17,14 +17,23 @@
           "/home/coder/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
+<<<<<<< HEAD
           "net6.0"
+=======
+          "net5.0"
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
+<<<<<<< HEAD
           "net6.0": {
             "targetAlias": "net6.0",
+=======
+          "net5.0": {
+            "targetAlias": "net5.0",
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
             "projectReferences": {}
           }
         },
@@ -35,21 +44,33 @@
         }
       },
       "frameworks": {
+<<<<<<< HEAD
         "net6.0": {
           "targetAlias": "net6.0",
+=======
+        "net5.0": {
+          "targetAlias": "net5.0",
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
           "dependencies": {
             "Microsoft.AspNetCore.Hosting": {
               "target": "Package",
               "version": "[2.2.0, )"
             },
+<<<<<<< HEAD
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.0, )"
+=======
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
+<<<<<<< HEAD
               "version": "[6.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.InMemory": {
@@ -67,6 +88,17 @@
             "NUnit": {
               "target": "Package",
               "version": "[3.13.0, )"
+=======
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -87,8 +119,12 @@
             "net47",
             "net471",
             "net472",
+<<<<<<< HEAD
             "net48",
             "net481"
+=======
+            "net48"
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -100,7 +136,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.408/RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.408/RuntimeIdentifierGraph.json"
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
         }
       }
     }
