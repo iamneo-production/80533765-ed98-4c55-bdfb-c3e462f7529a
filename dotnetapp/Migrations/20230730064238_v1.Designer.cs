@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using dotnetapp.Context;
 
@@ -10,9 +11,10 @@ using dotnetapp.Context;
 namespace dotnetapp.Migrations
 {
     [DbContext(typeof(PostPaidDbContext))]
-    partial class PostPaidDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230730064238_v1")]
+    partial class v1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
