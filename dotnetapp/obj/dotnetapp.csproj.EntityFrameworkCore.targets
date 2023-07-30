@@ -1,6 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<<<<<<< HEAD
   <Target Name="GetEFProjectMetadata">
+=======
+  <Target Name="GetEFProjectMetadata" Condition="">
+>>>>>>> f1785ea7aa2a7dbe2231f87f47dc0d29b18fe6ee
     <MSBuild Condition=" '$(TargetFramework)' == '' "
              Projects="$(MSBuildProjectFile)"
              Targets="GetEFProjectMetadata"
@@ -17,12 +21,24 @@
       <EFProjectMetadata Include="RuntimeFrameworkVersion: $(RuntimeFrameworkVersion)" />
       <EFProjectMetadata Include="TargetFileName: $(TargetFileName)" />
       <EFProjectMetadata Include="TargetFrameworkMoniker: $(TargetFrameworkMoniker)" />
+<<<<<<< HEAD
       <EFProjectMetadata Include="Nullable: $(Nullable)" />
       <EFProjectMetadata Include="TargetFramework: $(TargetFramework)" />
       <EFProjectMetadata Include="TargetPlatformIdentifier: $(TargetPlatformIdentifier)" />
+=======
+>>>>>>> f1785ea7aa2a7dbe2231f87f47dc0d29b18fe6ee
     </ItemGroup>
     <WriteLinesToFile Condition=" '$(TargetFramework)' != '' "
                       File="$(EFProjectMetadataFile)"
                       Lines="@(EFProjectMetadata)" />
   </Target>
 </Project>
+<<<<<<< HEAD
+=======
+   </ItemGroup>
+    <WriteLinesToFile Condition=" '$(TargetFramework)' != '' "
+                      File="$(EFProjectMetadataFile)"
+                      Lines="@(EFProjectMetadata)" />
+  </Target>
+</Project>
+>>>>>>> f1785ea7aa2a7dbe2231f87f47dc0d29b18fe6ee
