@@ -7,16 +7,10 @@ import { SharedService } from './services/shared.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NotificationComponent } from './notification/notification.component';
 
-
-
-
 @NgModule({
-  declarations: [
-    
+  declarations: [  
    AppComponent,
    NotificationComponent
-   
-
   ],
   imports: [
     BrowserModule,
