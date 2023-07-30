@@ -4,10 +4,14 @@
   "tools": {
     "dotnet-ef": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "version": "6.0.0",
 =======
       "version": "5.0.0",
 >>>>>>> f1785ea7aa2a7dbe2231f87f47dc0d29b18fe6ee
+=======
+      "version": "5.0.0",
+>>>>>>> c5ec9234e30cfccfa05c6d6aaa1107e15a16a1b6
       "commands": [
         "dotnet-ef"
       ]

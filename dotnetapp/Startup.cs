@@ -70,4 +70,8 @@ namespace dotnetapp
             });
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> c5ec9234e30cfccfa05c6d6aaa1107e15a16a1b6
