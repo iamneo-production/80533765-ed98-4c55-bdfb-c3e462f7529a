@@ -1,0 +1,51 @@
+<form [formGroup]="rechargeform" (click)="onSubmit()">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="RechargeType">Recharge Type:</label>
+            <input type="text" class="form-control" [(ngModel)]="RechargeType" placeholder="Enter Recharge Type" formControlName="RechargeType" id="RechargeType" required [value]="planDetails?.planType" readonly >
+        </div>
+        <div class="form-group col-md-6">
+            <label for="Email">Email:</label>
+            <input type="Email" class="form-control" [(ngModel)]="Email" placeholder="Enter email-id"  formControlName="Email" id="Email" required >
+            <div *ngIf="f['Email'].invalid && f['Email'].touched "class="alert alert-danger">
+                <div *ngIf="f['Email'].errors && f['Email'].errors['required']">Email is required.</div>
+                <div *ngIf="f['Email'].errors && f['Email'].errors['email']">Invalid email format.</div>
+            </div>
+        </div>
+      </div>
+      <br>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="UName">Name:</label>
+            <input type="text" class="form-control" [(ngModel)]="UName" placeholder="Enter Name"  formControlName="UName" id="UName" required >
+            <div *ngIf="f['UName'].invalid && f['UName'].touched"class="alert alert-danger">
+                <div *ngIf="f['UName'].errors && f['UName'].errors['required']"> Name is required.</div>
+                <div *ngIf="f['UName'].errors && f['UName'].errors['pattern']">Invalid Name format.</div> 
+            </div>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="RechargePlan">Recharge Plan:</label>
+            <input type="text" class="form-control" [(ngModel)]="RechargePlan" required placeholder="Enter Recharge Plan" formControlName="RechargePlan" id="RechargePlan" [value]="planDetails?.planName" readonly>
+        </div>
+      </div>
+      <br>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="Mobile">Recharge Number:</label>
+            <input type="text" class="form-control" [(ngModel)]="Mobile" placeholder="Enter Reacharge Number" formControlName="Mobile" id="Mobile" [pattern]="'^(?!([0-9])\\1{9}$)[0-9]{10}$'">
+            <div *ngIf="f['Mobile'].invalid && f['Mobile'].touched"class="alert alert-danger">
+                <div *ngIf="f['Mobile'].errors && f['Mobile'].errors['required']">Mobile Number is required.</div>     
+                <div *ngIf="f['Mobile'].errors && f['Mobile'].errors['pattern']">Invalid mobile number format.</div>   
+            </div>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="RechargePrice">Recharge Price:</label>
+            <input type="text" class="form-control" [(ngModel)]="RechargePrice" placeholder="Enter Recharge Price" formControlName="RechargePrice" id="RechargePrice" [value]="planDetails?.planPrice" readonly>
+        </div>
+      </div>
+      <br>
+      <button (click)="addRecharge()" class="btn btn-primary" [disabled]="rechargeform.invalid" style="background-color: #cc61ca;">
+        Recharge
+      </button>
+    </form>
+    
