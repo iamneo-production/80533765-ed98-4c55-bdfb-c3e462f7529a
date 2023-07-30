@@ -41,11 +41,7 @@ namespace dotnetapp.Controllers
         return Ok(rechargePlan);
     }
      [HttpGet("api/Recharge/largeId")]
-<<<<<<< HEAD
-    public IActionResult Get()
-=======
     public IActionResult GetlargerId()
->>>>>>> 7edfd09cbdb5b4822db1c078ebd6a6a80a100ef3
     {
         int largestPlanId = _dbContext.Recharge.Max(p => p.RechargeId);
         
@@ -62,11 +58,7 @@ namespace dotnetapp.Controllers
         _dbContext.Recharge.Add(rechargePlan);
         _dbContext.SaveChanges();
 
-<<<<<<< HEAD
-        return CreatedAtAction(nameof(GetRechargePlanById), new { id = rechargePlan.RechargeId }, rechargePlan);
-=======
         return CreatedAtAction(nameof(GetRechargePlanById), new { id = rechargePlan.RechargeId ,Message = "Recharge successfully done."}, rechargePlan);
->>>>>>> 7edfd09cbdb5b4822db1c078ebd6a6a80a100ef3
     }
 
     [HttpPut("api/Recharge")]
@@ -85,10 +77,7 @@ namespace dotnetapp.Controllers
         existingPlan.Email  = updatedPlan.Email ;
         existingPlan.RechargePlan  = updatedPlan.RechargePlan ;
         existingPlan.RechargePrice  = updatedPlan.RechargePrice ;
-<<<<<<< HEAD
-=======
         existingPlan.PlanId=updatedPlan.PlanId;
->>>>>>> 7edfd09cbdb5b4822db1c078ebd6a6a80a100ef3
 
         // Update other properties as needed
 
@@ -98,11 +87,7 @@ namespace dotnetapp.Controllers
     }
     // PUT api/rechargeplan/{id}
     [HttpPut("api/Recharge/{id}")]
-<<<<<<< HEAD
-    public ActionResult<Addons> UpdateRechargePlan(int id, Recharge updatedPlan)
-=======
     public ActionResult<Addons> UpdateRechargePlanById(int id, Recharge updatedPlan)
->>>>>>> 7edfd09cbdb5b4822db1c078ebd6a6a80a100ef3
     {
         var existingPlan = _dbContext.Recharge.Find(id);
 
@@ -116,10 +101,7 @@ namespace dotnetapp.Controllers
         existingPlan.Email  = updatedPlan.Email ;
         existingPlan.RechargePlan  = updatedPlan.RechargePlan ;
         existingPlan.RechargePrice  = updatedPlan.RechargePrice ;
-<<<<<<< HEAD
-=======
         existingPlan.PlanId=updatedPlan.PlanId;
->>>>>>> 7edfd09cbdb5b4822db1c078ebd6a6a80a100ef3
 
         _dbContext.SaveChanges();
 
@@ -128,11 +110,7 @@ namespace dotnetapp.Controllers
 
     // DELETE api/rechargeplan/{id}
     [HttpDelete("api/Recharge/{id}")]
-<<<<<<< HEAD
-    public ActionResult DeleteRechargePlan(int id)
-=======
     public ActionResult DeleteRechargePlanById(int id)
->>>>>>> 7edfd09cbdb5b4822db1c078ebd6a6a80a100ef3
     {
         var rechargePlan = _dbContext.Recharge.Find(id);
 
@@ -146,8 +124,6 @@ namespace dotnetapp.Controllers
 
         return NoContent();
     }
-<<<<<<< HEAD
-=======
     [HttpGet("api/recharges/{mobileNumber}")]
         public IActionResult GetRechargesByMobileNumber(string mobileNumber)
         {
@@ -158,6 +134,5 @@ namespace dotnetapp.Controllers
             return Ok(recharges);
         }
 
->>>>>>> 7edfd09cbdb5b4822db1c078ebd6a6a80a100ef3
     }
 }

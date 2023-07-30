@@ -21,11 +21,7 @@ namespace dotnetapp.Controllers
         }
 
     [HttpGet("admin/getAddon")]
-<<<<<<< HEAD
-    public ActionResult<IEnumerable<Addons>> GetAllRechargePlans()
-=======
     public ActionResult<IEnumerable<Addons>> GetAllAddonPlans()
->>>>>>> 7edfd09cbdb5b4822db1c078ebd6a6a80a100ef3
     {
         var postPlans = _dbContext.Addons.ToList();
         return Ok(postPlans);
@@ -33,11 +29,7 @@ namespace dotnetapp.Controllers
 
     // GET api/rechargeplan/{id}
     [HttpGet("api/Addons/{id}")]
-<<<<<<< HEAD
-    public ActionResult<Addons> GetRechargePlanById(int id)
-=======
     public ActionResult<Addons> GetAddonsById(int id)
->>>>>>> 7edfd09cbdb5b4822db1c078ebd6a6a80a100ef3
     {
         var rechargePlan = _dbContext.Addons.Find(id);
 
@@ -51,11 +43,7 @@ namespace dotnetapp.Controllers
 
     // POST api/rechargeplan
     [HttpPost("api/Addons")]
-<<<<<<< HEAD
-    public ActionResult<Addons> CreateRechargePlan(Addons rechargePlan)
-=======
     public ActionResult<Addons> CreateAddonPlan(Addons rechargePlan)
->>>>>>> 7edfd09cbdb5b4822db1c078ebd6a6a80a100ef3
     {
         // Check if an addon with the same details already exists
         var existingAddon = _dbContext.Addons.FirstOrDefault(addon =>
@@ -70,20 +58,12 @@ namespace dotnetapp.Controllers
 
         _dbContext.Addons.Add(rechargePlan);
         _dbContext.SaveChanges();
-<<<<<<< HEAD
-         return CreatedAtAction(nameof(GetRechargePlanById), new { id = rechargePlan.addonId }, new { Message = "Addon successfully added.", Addon = rechargePlan });
-=======
          return CreatedAtAction(nameof(GetAddonsById), new { id = rechargePlan.addonId }, new { Message = "Addon successfully added.", Addon = rechargePlan });
->>>>>>> 7edfd09cbdb5b4822db1c078ebd6a6a80a100ef3
     }
 
 
     [HttpPut("api/Addons")]
-<<<<<<< HEAD
-    public ActionResult<Addons> UpdateRechargePlan(Addons updatedPlan)
-=======
     public ActionResult<Addons> UpdateAddonPlan(Addons updatedPlan)
->>>>>>> 7edfd09cbdb5b4822db1c078ebd6a6a80a100ef3
     {
         var existingPlan = _dbContext.Addons.Find(updatedPlan.addonId);
 
@@ -115,11 +95,7 @@ namespace dotnetapp.Controllers
     }
     // PUT api/rechargeplan/{id}
     [HttpPut("api/Addons/{id}")]
-<<<<<<< HEAD
-    public ActionResult<Addons> UpdateRechargePlan(int id, Addons updatedPlan)
-=======
     public ActionResult<Addons> UpdateAddonPlan(int id, Addons updatedPlan)
->>>>>>> 7edfd09cbdb5b4822db1c078ebd6a6a80a100ef3
     {
         var existingPlan = _dbContext.Addons.Find(id);
 
@@ -151,11 +127,7 @@ namespace dotnetapp.Controllers
     }
     // DELETE api/rechargeplan/{id}
     [HttpDelete("api/Addons/{id}")]
-<<<<<<< HEAD
-    public ActionResult DeleteRechargePlan(int id)
-=======
     public ActionResult DeleteAddonPlan(int id)
->>>>>>> 7edfd09cbdb5b4822db1c078ebd6a6a80a100ef3
     {
         var rechargePlan = _dbContext.Addons.Find(id);
 
