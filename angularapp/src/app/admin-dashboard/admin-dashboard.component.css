@@ -1,0 +1,6 @@
+.navbar-nav .nav-item .nav-link:focus,
+.navbar-nav .nav-item .nav-link:visited,
+.navbar-nav .nav-item .nav-link.active {
+  text-decoration: underline;
+}
+
