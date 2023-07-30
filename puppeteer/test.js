@@ -4,7 +4,11 @@ const puppeteer = require('puppeteer');
     const page = await browser.newPage();
     try{
 <<<<<<< HEAD
+<<<<<<< HEAD
     await page.goto('https://8081-fffebfbbfbffdaaaaddcbdfdabdafbcafdeccaedae.project.examly.io/');
+=======
+    await page.goto('https://8081-fdbbaecbaaaddcbdfdabdafbcafdeccaedae.project.examly.io/');
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 =======
     await page.goto('https://8081-fdbbaecbaaaddcbdfdabdafbcafdeccaedae.project.examly.io/');
 >>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
@@ -40,7 +44,11 @@ const puppeteer = require('puppeteer');
     const page = await browser.newPage();
     try{
 <<<<<<< HEAD
+<<<<<<< HEAD
     await page.goto('https://8081-fffebfbbfbffdaaaaddcbdfdabdafbcafdeccaedae.project.examly.io/');
+=======
+    await page.goto('https://8081-fdbbaecbaaaddcbdfdabdafbcafdeccaedae.project.examly.io/');
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 =======
     await page.goto('https://8081-fdbbaecbaaaddcbdfdabdafbcafdeccaedae.project.examly.io/');
 >>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
@@ -71,7 +79,11 @@ const puppeteer = require('puppeteer');
     const page = await browser.newPage();
     try{
 <<<<<<< HEAD
+<<<<<<< HEAD
     await page.goto('https://8081-fffebfbbfbffdaaaaddcbdfdabdafbcafdeccaedae.project.examly.io/');
+=======
+    await page.goto('https://8081-fdbbaecbaaaddcbdfdabdafbcafdeccaedae.project.examly.io/');
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 =======
     await page.goto('https://8081-fdbbaecbaaaddcbdfdabdafbcafdeccaedae.project.examly.io/');
 >>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
@@ -104,7 +116,11 @@ const puppeteer = require('puppeteer');
   const page = await browser.newPage();
   try{
 <<<<<<< HEAD
+<<<<<<< HEAD
   await page.goto('https://8081-fffebfbbfbffdaaaaddcbdfdabdafbcafdeccaedae.project.examly.io/');
+=======
+  await page.goto('https://8081-fdbbaecbaaaddcbdfdabdafbcafdeccaedae.project.examly.io/');
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 =======
   await page.goto('https://8081-fdbbaecbaaaddcbdfdabdafbcafdeccaedae.project.examly.io/');
 >>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
@@ -139,7 +155,11 @@ const puppeteer = require('puppeteer');
   const page = await browser.newPage();
   try{
 <<<<<<< HEAD
+<<<<<<< HEAD
   await page.goto('https://8081-fffebfbbfbffdaaaaddcbdfdabdafbcafdeccaedae.project.examly.io/');
+=======
+  await page.goto('https://8081-fdbbaecbaaaddcbdfdabdafbcafdeccaedae.project.examly.io/');
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 =======
   await page.goto('https://8081-fdbbaecbaaaddcbdfdabdafbcafdeccaedae.project.examly.io/');
 >>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
@@ -172,7 +192,11 @@ const puppeteer = require('puppeteer');
   const page = await browser.newPage();
   try{
 <<<<<<< HEAD
+<<<<<<< HEAD
   await page.goto('https://8081-fffebfbbfbffdaaaaddcbdfdabdafbcafdeccaedae.project.examly.io/');
+=======
+  await page.goto('https://8081-fdbbaecbaaaddcbdfdabdafbcafdeccaedae.project.examly.io/');
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 =======
   await page.goto('https://8081-fdbbaecbaaaddcbdfdabdafbcafdeccaedae.project.examly.io/');
 >>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de

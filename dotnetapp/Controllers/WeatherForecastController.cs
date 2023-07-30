@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -34,6 +35,8 @@ public class WeatherForecastController : ControllerBase
         })
         .ToArray();
 =======
+=======
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -71,6 +74,9 @@ namespace dotnetapp.Controllers
             })
             .ToArray();
         }
+<<<<<<< HEAD
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
+=======
 >>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
     }
 }

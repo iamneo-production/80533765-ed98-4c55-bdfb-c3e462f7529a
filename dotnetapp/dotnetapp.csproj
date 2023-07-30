@@ -2,6 +2,7 @@
 
   <PropertyGroup>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <TargetFramework>net6.0</TargetFramework>
      <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute> 
@@ -18,6 +19,8 @@
     <PackageReference Include="Moq" Version="4.18.4" />
     <PackageReference Include="NUnit" Version="3.13" />
 =======
+=======
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
@@ -30,13 +33,19 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
      <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="5.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0" />
+<<<<<<< HEAD
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
+=======
 >>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.5.0" />
     <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.0"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 =======
 >>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
   </ItemGroup>

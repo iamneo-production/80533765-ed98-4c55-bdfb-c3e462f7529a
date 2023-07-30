@@ -1,5 +1,6 @@
 using System;
 <<<<<<< HEAD
+<<<<<<< HEAD
 namespace dotnetapp;
 
 public class WeatherForecast
@@ -12,6 +13,8 @@ public class WeatherForecast
 
     public string? Summary { get; set; }
 =======
+=======
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 
 namespace dotnetapp
 {
@@ -25,5 +28,8 @@ namespace dotnetapp
 
         public string Summary { get; set; }
     }
+<<<<<<< HEAD
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
+=======
 >>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 }

@@ -6,8 +6,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using dotnetapp.Context;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #nullable disable
 
+=======
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 =======
 >>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 namespace dotnetapp.Migrations
@@ -20,10 +23,16 @@ namespace dotnetapp.Migrations
 #pragma warning disable 612, 618
             modelBuilder
 <<<<<<< HEAD
+<<<<<<< HEAD
                 .HasAnnotation("ProductVersion", "6.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
+=======
+                .UseIdentityColumns()
+                .HasAnnotation("Relational:MaxIdentifierLength", 128)
+                .HasAnnotation("ProductVersion", "5.0.0");
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 =======
                 .UseIdentityColumns()
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
@@ -35,9 +44,14 @@ namespace dotnetapp.Migrations
                     b.Property<int>("addonId")
                         .ValueGeneratedOnAdd()
 <<<<<<< HEAD
+<<<<<<< HEAD
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("addonId"), 1L, 1);
+=======
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 =======
                         .HasColumnType("int")
                         .UseIdentityColumn();
@@ -55,7 +69,11 @@ namespace dotnetapp.Migrations
                     b.HasKey("addonId");
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                     b.ToTable("Addons", (string)null);
+=======
+                    b.ToTable("Addons");
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 =======
                     b.ToTable("Addons");
 >>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
@@ -66,9 +84,14 @@ namespace dotnetapp.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
 <<<<<<< HEAD
+<<<<<<< HEAD
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+=======
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 =======
                         .HasColumnType("int")
                         .UseIdentityColumn();
@@ -93,7 +116,11 @@ namespace dotnetapp.Migrations
                     b.HasKey("Id");
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                     b.ToTable("admins", (string)null);
+=======
+                    b.ToTable("admins");
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 =======
                     b.ToTable("admins");
 >>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
@@ -104,9 +131,14 @@ namespace dotnetapp.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
 <<<<<<< HEAD
+<<<<<<< HEAD
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+=======
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 =======
                         .HasColumnType("int")
                         .UseIdentityColumn();
@@ -121,7 +153,11 @@ namespace dotnetapp.Migrations
                     b.HasKey("Id");
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                     b.ToTable("logins", (string)null);
+=======
+                    b.ToTable("logins");
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 =======
                     b.ToTable("logins");
 >>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
@@ -132,9 +168,14 @@ namespace dotnetapp.Migrations
                     b.Property<int>("planId")
                         .ValueGeneratedOnAdd()
 <<<<<<< HEAD
+<<<<<<< HEAD
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("planId"), 1L, 1);
+=======
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 =======
                         .HasColumnType("int")
                         .UseIdentityColumn();
@@ -162,7 +203,11 @@ namespace dotnetapp.Migrations
                     b.HasKey("planId");
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                     b.ToTable("PostPaid", (string)null);
+=======
+                    b.ToTable("PostPaid");
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 =======
                     b.ToTable("PostPaid");
 >>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
@@ -173,9 +218,14 @@ namespace dotnetapp.Migrations
                     b.Property<int>("RechargeId")
                         .ValueGeneratedOnAdd()
 <<<<<<< HEAD
+<<<<<<< HEAD
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RechargeId"), 1L, 1);
+=======
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 =======
                         .HasColumnType("int")
                         .UseIdentityColumn();
@@ -205,7 +255,11 @@ namespace dotnetapp.Migrations
                     b.HasKey("RechargeId");
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                     b.ToTable("Recharge", (string)null);
+=======
+                    b.ToTable("Recharge");
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 =======
                     b.ToTable("Recharge");
 >>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
@@ -216,9 +270,14 @@ namespace dotnetapp.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
 <<<<<<< HEAD
+<<<<<<< HEAD
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+=======
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 =======
                         .HasColumnType("int")
                         .UseIdentityColumn();
@@ -239,7 +298,11 @@ namespace dotnetapp.Migrations
                     b.HasKey("Id");
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                     b.ToTable("Review", (string)null);
+=======
+                    b.ToTable("Review");
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 =======
                     b.ToTable("Review");
 >>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
@@ -250,9 +313,14 @@ namespace dotnetapp.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
 <<<<<<< HEAD
+<<<<<<< HEAD
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+=======
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 =======
                         .HasColumnType("int")
                         .UseIdentityColumn();
@@ -277,7 +345,11 @@ namespace dotnetapp.Migrations
                     b.HasKey("Id");
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                     b.ToTable("users", (string)null);
+=======
+                    b.ToTable("users");
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 =======
                     b.ToTable("users");
 >>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de

@@ -2,6 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
@@ -11,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppTest", "WebAppTest\We
 =======
 =======
 >>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
+=======
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
@@ -18,7 +21,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnetapp", "dotnetapp.cspr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject", "TestProject\TestProject.csproj", "{6E109A13-CE25-49FC-8AC9-F44B55D5319C}"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b6adfd06dc27dcd0c9a7ff899bb753362eb4ab12
+=======
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 =======
 >>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 EndProject
@@ -27,6 +33,7 @@ Global
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
@@ -47,6 +54,8 @@ Global
 =======
 =======
 >>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
+=======
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
@@ -60,7 +69,10 @@ Global
 		{6E109A13-CE25-49FC-8AC9-F44B55D5319C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E109A13-CE25-49FC-8AC9-F44B55D5319C}.Release|Any CPU.Build.0 = Release|Any CPU
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b6adfd06dc27dcd0c9a7ff899bb753362eb4ab12
+=======
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 =======
 >>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 	EndGlobalSection

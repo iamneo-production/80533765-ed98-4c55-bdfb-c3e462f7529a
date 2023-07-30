@@ -1,7 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 <<<<<<< HEAD
+<<<<<<< HEAD
   <Target Name="GetEFProjectMetadata">
+=======
+  <Target Name="GetEFProjectMetadata" Condition="">
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 =======
   <Target Name="GetEFProjectMetadata" Condition="">
 >>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
@@ -22,9 +26,12 @@
       <EFProjectMetadata Include="TargetFileName: $(TargetFileName)" />
       <EFProjectMetadata Include="TargetFrameworkMoniker: $(TargetFrameworkMoniker)" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <EFProjectMetadata Include="Nullable: $(Nullable)" />
       <EFProjectMetadata Include="TargetFramework: $(TargetFramework)" />
       <EFProjectMetadata Include="TargetPlatformIdentifier: $(TargetPlatformIdentifier)" />
+=======
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 =======
 >>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
     </ItemGroup>

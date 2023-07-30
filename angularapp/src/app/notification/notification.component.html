@@ -1,0 +1,38 @@
+
+  <app-user-dashboard></app-user-dashboard>
+
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <div id="notificationBody">
+          <p style="font-family: Georgia, 'Times New Roman', Times, serif;font-size: larger;">You have recharged sucessfully</p>
+          <p style="font-family: Georgia, 'Times New Roman', Times, serif;font-size: larger;">Your Reference Number:34567834{{rechargeid}}</p>
+          <p style="font-family: Georgia, 'Times New Roman', Times, serif;font-size: larger;">Your Mobile Number:{{IdsList?.mobile}}</p>
+        </div>
+        <div class="rating-container mt-4">
+          <h3 style="font-family: Georgia, 'Times New Roman', Times, serif;">Rate your experience:</h3>
+          <div class="stars">
+            <span class="star" (click)="onStarClick(1)" [class.filled]="rating >= 1">&#9733;</span>
+            <span class="star" (click)="onStarClick(2)" [class.filled]="rating >= 2">&#9733;</span>
+            <span class="star" (click)="onStarClick(3)" [class.filled]="rating >= 3">&#9733;</span>
+            <span class="star" (click)="onStarClick(4)" [class.filled]="rating >= 4">&#9733;</span>
+            <span class="star" (click)="onStarClick(5)" [class.filled]="rating >= 5">&#9733;</span>
+          </div>
+        </div>
+        <div class="feedback-container">
+          <h3 style="font-family: Georgia, 'Times New Roman', Times, serif;">Provide your feedback:</h3>
+          <textarea [(ngModel)]="comment"></textarea><br>
+          <button (click)="submitFeedback()" class="btn btn-primary" style="background-color: #cc61ca;">
+            Submit
+          </button>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <img src="https://img.freepik.com/free-vector/customer-feedback-concept-illustration_114360-7208.jpg?w=740&t=st=1689834366~exp=1689834966~hmac=d6cc728b725be7e4e704b8e7b33750dfb09385f75d95b45a197b45ee823affc1" alt="Customer Feedback" class="img-fluid">
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
