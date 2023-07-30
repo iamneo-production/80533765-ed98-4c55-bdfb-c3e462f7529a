@@ -7,7 +7,11 @@ import { Observable, BehaviorSubject } from 'rxjs';
 })
 export class LoginService {
 
+<<<<<<< HEAD
   private baseUrl: string = "https://8080-addadbdaeaaaddcbdfdabdafbcafdeccaedae.project.examly.io/admin/login";
+=======
+  private baseUrl: string = "https://8080-faacbacbeaaaaddcbdfdabdafbcafdeccaedae.project.examly.io/admin/login";
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 
   private isLoggedIn: boolean = false;
   private userEmail: string | null = null;
@@ -31,6 +35,10 @@ export class LoginService {
     return this.http.post<any>(`${this.baseUrl}`, loginData);
   }
   logout(): Observable<any> {
+<<<<<<< HEAD
     return this.http.post<any>(`https://8080-addadbdaeaaaddcbdfdabdafbcafdeccaedae.project.examly.io/user/logout`, { Email: this.getUserEmail() });
+=======
+    return this.http.post<any>(`https://8080-faacbacbeaaaaddcbdfdabdafbcafdeccaedae.project.examly.io/user/logout`, { Email: this.getUserEmail() });
+>>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
   }
 }
