@@ -22,7 +22,7 @@ export class UserhomeComponent implements OnInit {
   }
 
   fetchUserMobileNumber() {
-    this.http.get<any>(`https://8080-faacbacbeaaaaddcbdfdabdadcfacebfffcdcbfec.project.examly.io/api/user/${this.userEmail}`).subscribe({
+    this.http.get<any>(`https://8080-faacbacbeaaaaddcbdfdabdafbcafdeccaedae.project.examly.io/api/user/${this.userEmail}`).subscribe({
       next: (res) => {
         if (res?.user?.mobileNumber) {
           console.log(res);

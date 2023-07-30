@@ -5,8 +5,6 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using dotnetapp.Context;
 
-#nullable disable
-
 namespace dotnetapp.Migrations
 {
     [DbContext(typeof(PostPaidDbContext))]
@@ -16,18 +14,16 @@ namespace dotnetapp.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.0")
-                .HasAnnotation("Relational:MaxIdentifierLength", 128);
-
-            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
+                .UseIdentityColumns()
+                .HasAnnotation("Relational:MaxIdentifierLength", 128)
+                .HasAnnotation("ProductVersion", "5.0.0");
 
             modelBuilder.Entity("dotnetapp.Models.Addons", b =>
                 {
                     b.Property<int>("addonId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("addonId"), 1L, 1);
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
 
                     b.Property<string>("addonDetails")
                         .HasColumnType("nvarchar(max)");
@@ -40,16 +36,15 @@ namespace dotnetapp.Migrations
 
                     b.HasKey("addonId");
 
-                    b.ToTable("Addons", (string)null);
+                    b.ToTable("Addons");
                 });
 
             modelBuilder.Entity("dotnetapp.Models.Admin", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -69,16 +64,15 @@ namespace dotnetapp.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("admins", (string)null);
+                    b.ToTable("admins");
                 });
 
             modelBuilder.Entity("dotnetapp.Models.Login", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
 
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
@@ -88,16 +82,15 @@ namespace dotnetapp.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("logins", (string)null);
+                    b.ToTable("logins");
                 });
 
             modelBuilder.Entity("dotnetapp.Models.PostPaid", b =>
                 {
                     b.Property<int>("planId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("planId"), 1L, 1);
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
 
                     b.Property<string>("planDescription")
                         .HasColumnType("nvarchar(max)");
@@ -120,16 +113,15 @@ namespace dotnetapp.Migrations
 
                     b.HasKey("planId");
 
-                    b.ToTable("PostPaid", (string)null);
+                    b.ToTable("PostPaid");
                 });
 
             modelBuilder.Entity("dotnetapp.Models.Recharge", b =>
                 {
                     b.Property<int>("RechargeId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RechargeId"), 1L, 1);
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
 
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
@@ -154,16 +146,15 @@ namespace dotnetapp.Migrations
 
                     b.HasKey("RechargeId");
 
-                    b.ToTable("Recharge", (string)null);
+                    b.ToTable("Recharge");
                 });
 
             modelBuilder.Entity("dotnetapp.Models.Review", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
 
                     b.Property<int>("AddonId")
                         .HasColumnType("int");
@@ -179,16 +170,15 @@ namespace dotnetapp.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Review", (string)null);
+                    b.ToTable("Review");
                 });
 
             modelBuilder.Entity("dotnetapp.Models.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -208,7 +198,7 @@ namespace dotnetapp.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("users", (string)null);
+                    b.ToTable("users");
                 });
 #pragma warning restore 612, 618
         }
