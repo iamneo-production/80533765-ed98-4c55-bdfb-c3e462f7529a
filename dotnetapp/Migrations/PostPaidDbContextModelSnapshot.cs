@@ -5,14 +5,6 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using dotnetapp.Context;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-#nullable disable
-
-=======
->>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
-=======
->>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 namespace dotnetapp.Migrations
 {
     [DbContext(typeof(PostPaidDbContext))]
@@ -22,40 +14,16 @@ namespace dotnetapp.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-<<<<<<< HEAD
-<<<<<<< HEAD
-                .HasAnnotation("ProductVersion", "6.0.0")
-                .HasAnnotation("Relational:MaxIdentifierLength", 128);
-
-            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
-=======
                 .UseIdentityColumns()
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.0");
->>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
-=======
-                .UseIdentityColumns()
-                .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.0");
->>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 
             modelBuilder.Entity("dotnetapp.Models.Addons", b =>
                 {
                     b.Property<int>("addonId")
                         .ValueGeneratedOnAdd()
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("addonId"), 1L, 1);
-=======
                         .HasColumnType("int")
                         .UseIdentityColumn();
->>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
-=======
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
->>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 
                     b.Property<string>("addonDetails")
                         .HasColumnType("nvarchar(max)");
@@ -68,34 +36,15 @@ namespace dotnetapp.Migrations
 
                     b.HasKey("addonId");
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    b.ToTable("Addons", (string)null);
-=======
                     b.ToTable("Addons");
->>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
-=======
-                    b.ToTable("Addons");
->>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
                 });
 
             modelBuilder.Entity("dotnetapp.Models.Admin", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-=======
                         .HasColumnType("int")
                         .UseIdentityColumn();
->>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
-=======
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
->>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -115,34 +64,15 @@ namespace dotnetapp.Migrations
 
                     b.HasKey("Id");
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    b.ToTable("admins", (string)null);
-=======
                     b.ToTable("admins");
->>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
-=======
-                    b.ToTable("admins");
->>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
                 });
 
             modelBuilder.Entity("dotnetapp.Models.Login", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-=======
                         .HasColumnType("int")
                         .UseIdentityColumn();
->>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
-=======
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
->>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
@@ -152,34 +82,15 @@ namespace dotnetapp.Migrations
 
                     b.HasKey("Id");
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    b.ToTable("logins", (string)null);
-=======
                     b.ToTable("logins");
->>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
-=======
-                    b.ToTable("logins");
->>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
                 });
 
             modelBuilder.Entity("dotnetapp.Models.PostPaid", b =>
                 {
                     b.Property<int>("planId")
                         .ValueGeneratedOnAdd()
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("planId"), 1L, 1);
-=======
                         .HasColumnType("int")
                         .UseIdentityColumn();
->>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
-=======
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
->>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 
                     b.Property<string>("planDescription")
                         .HasColumnType("nvarchar(max)");
@@ -202,34 +113,15 @@ namespace dotnetapp.Migrations
 
                     b.HasKey("planId");
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    b.ToTable("PostPaid", (string)null);
-=======
                     b.ToTable("PostPaid");
->>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
-=======
-                    b.ToTable("PostPaid");
->>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
                 });
 
             modelBuilder.Entity("dotnetapp.Models.Recharge", b =>
                 {
                     b.Property<int>("RechargeId")
                         .ValueGeneratedOnAdd()
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RechargeId"), 1L, 1);
-=======
                         .HasColumnType("int")
                         .UseIdentityColumn();
->>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
-=======
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
->>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
@@ -254,34 +146,15 @@ namespace dotnetapp.Migrations
 
                     b.HasKey("RechargeId");
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    b.ToTable("Recharge", (string)null);
-=======
                     b.ToTable("Recharge");
->>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
-=======
-                    b.ToTable("Recharge");
->>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
                 });
 
             modelBuilder.Entity("dotnetapp.Models.Review", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-=======
                         .HasColumnType("int")
                         .UseIdentityColumn();
->>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
-=======
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
->>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 
                     b.Property<int>("AddonId")
                         .HasColumnType("int");
@@ -297,34 +170,15 @@ namespace dotnetapp.Migrations
 
                     b.HasKey("Id");
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    b.ToTable("Review", (string)null);
-=======
                     b.ToTable("Review");
->>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
-=======
-                    b.ToTable("Review");
->>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
                 });
 
             modelBuilder.Entity("dotnetapp.Models.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-=======
                         .HasColumnType("int")
                         .UseIdentityColumn();
->>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
-=======
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
->>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -344,15 +198,7 @@ namespace dotnetapp.Migrations
 
                     b.HasKey("Id");
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    b.ToTable("users", (string)null);
-=======
                     b.ToTable("users");
->>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
-=======
-                    b.ToTable("users");
->>>>>>> c0dea137e879487d0ce944b45ac10cf0d121c3de
                 });
 #pragma warning restore 612, 618
         }
